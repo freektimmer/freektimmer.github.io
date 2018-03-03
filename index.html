@@ -6,13 +6,22 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="panel">
+    <div class="container" id="scene">
+        <div data-depth="0.2" class="panel">
             <h1>Freek Timmer</h1>
             <span>Webdeveloper | UX/UI Designer</span>
         </div>
     </div>
+
     
     
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene, {
+            relativeInput: true
+        });
+    </script>
 </body>
 </html>
