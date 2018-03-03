@@ -1,0 +1,30 @@
+//
+// Buttons.scss
+// --------------------------------------------------
+.btn {
+    display: inline-block;
+    position: relative;
+    color: $white;
+    margin: 0;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: $white;
+    }
+
+    &--1 {
+        padding: 11px 25px;
+        line-height: 26px;
+        text-align: center;
+        @include font-size(16);
+        border-radius: 6px;
+        background: $c3;
+        transition: ease, 0.25s;
+
+        &:hover,
+        &:focus {
+            background: $c2;
+        }
+    }
+}
