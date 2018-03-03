@@ -6,10 +6,21 @@
 // --------------------------------------------------
 .container {
     position: relative;
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
+	max-width: 990px;
+	margin: 0 15px;
+	
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+	@include respond-min($mobile) {
+		margin: 0 30px;
+	}
+
+	@include respond-min(990px + 60px) {
+		margin: 0 auto;
+	}
 }
 
 // Main
@@ -82,4 +93,11 @@
 // -------------------------
 .aside {
 	
+}
+
+.panel {
+	padding: 30px;
+	background-color: $grayDark;
+	border-radius: 3px;
+	text-align: center;
 }
