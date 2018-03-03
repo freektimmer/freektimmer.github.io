@@ -9,11 +9,6 @@
 	max-width: 990px;
 	margin: 0 15px;
 	
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	
 	@include respond-min($mobile) {
 		margin: 0 30px;
 	}
@@ -26,7 +21,10 @@
 // Main
 // --------------------------------------------------
 .main {
-    display: block;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
 }
 
 .main-container {
@@ -90,10 +88,53 @@
 	
 }
 
+
 .panel {
 	text-align: center;
 
+	p, span, a {
+		color: $white;
+	}
+
+	&__heading {
+		position: relative;
+		margin: 0 0 2em;
+	}
+
+	&__contact {
+		position: relative;
+
+		.contact-items {
+			width: 100%;
+
+			ul {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				li {
+					display: block;
+
+					&:not(:last-child) {
+						margin: 0 1em 0 0;
+					}
+					a {
+						display: block;
+					}
+				}
+			}
+		}
+		
+	}
 	span {
 		color: $white;
 	}
+}
+
+.social {
+	width: 100%;
+	position: absolute;
+	left: 50%;
+	bottom: 30px;
+	transform: translateY(-50%);
 }
