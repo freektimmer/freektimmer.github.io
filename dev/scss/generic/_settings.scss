@@ -4,9 +4,14 @@
 
 // Custom colors
 // -------------------------
-$c1:    #000000 !default; // text color
-$c2:    #E3E3E3 !default; // background color
-$c3:    #F1001C !default; // red
+$c1:    #195679 !default;   // Blue Primary
+$c2:    #E3E3E3 !default;   // background color
+$c3:    #91D4D0 !default;   // Blue Light
+
+// Custom gradients
+// -------------------------
+$g1:    radial-gradient(circle at top right, $c3, $c1) !default;   // Blue Primary
+
 
 // Accent colors
 // -------------------------
@@ -20,7 +25,7 @@ $white:         #fff !default;
 
 // Scaffolding
 // -------------------------
-$bodyBackground : $grayDarker !default;
+$bodyBackground : $g1 !default;
 $textColor : $gray !default;
 
 // Links
@@ -31,8 +36,8 @@ $linkColorHover : darken($linkColor, 15%) !default;
 // Typography
 // -------------------------
 $baseFontFamily:    "Helvetica Neue",Helvetica, Arial, sans-serif;
-$baseFontSize:      14px !default;
-$baseLineHeight:    20px !default;
+$baseFontSize:      15px !default;
+$baseLineHeight:    1.6em !default;
 
 // Component sizing
 // -------------------------
@@ -40,10 +45,10 @@ $fontSizeParagraph : $baseFontSize;
 
 // Headings
 $headingsFontFamily:    $baseFontFamily;
-$headingsFontWeight:    normal;
+$headingsFontWeight:    bold;
 $headingsColor:         $c1;
 
-$fontSizeh1:            2.5em;
+$fontSizeh1:            4em;
 $fontSizeh2:            1.8em;
 $fontSizeh3:            1em;
 $fontSizeh4:            1em;
