@@ -1,4 +1,10 @@
 {
+  "name": "boilerplate",
+  "client": "Klantnaam",
+  "version": "1.0.0",
+  "company": "Freek Timmer",
+  "author": "Freek Timmer",
+  "private": true,
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-coffee": "latest",
@@ -7,6 +13,8 @@
     "gulp-sass": "latest",
     "gulp-uglify": "latest",
     "gulp-util": "latest",
+    "gulp-clean": "^0.3.2",
+    "gulp-autoprefixer": "^4.0.0",
     "browser-sync": "^2.23.6"
   }
 }
