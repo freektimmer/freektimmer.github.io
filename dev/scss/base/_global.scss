@@ -1,0 +1,253 @@
+//
+//  Basic.scss
+//
+
+// =============================================================================
+// HTML5 display definitions
+// =============================================================================
+article, aside, details,
+figcaption, figure, footer,
+header, hgroup, nav, section {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+[hidden] {
+    display: none;
+}
+
+// =============================================================================
+// Base
+// =============================================================================
+html {
+    position: relative;
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $baseFontFamily;
+    @include font-size(14);
+    line-height: $baseLineHeight;
+    margin: 0;
+    color: $textColor;
+    background: $bodyBackground;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+
+    &.active {
+        overflow-x: hidden;
+    }
+}
+
+::-moz-selection {
+    background: lighten($c3, 10%);
+    color: $white;
+    text-shadow: none;
+}
+
+::selection {
+    background: lighten($c3, 10%);
+    color: $white;
+    text-shadow: none;
+}
+
+::-webkit-input-placeholder {
+   color: $c1
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $c1
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $c1
+}
+
+:-ms-input-placeholder {
+   color: $c1
+}
+
+// =============================================================================
+// Links
+// =============================================================================
+a {
+    color: $linkColor;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+    text-decoration: underline;
+    color: $linkColorHover;
+}
+
+a[role=button] {
+    cursor: pointer;
+}
+
+a[href^=tel] {
+    @include respond-min($desktop) {
+        pointer-events: none;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none !important;
+        cursor: default !important;
+
+
+    }
+}
+
+// =============================================================================
+// Typography
+// =============================================================================
+abbr[title]         { border-bottom: 1px dotted; }
+b, strong           { font-weight: bold; }
+blockquote          { margin: 1em 40px; }
+q                   { quotes: none; }
+q:before, q:after   { content: ""; content: none; }
+small               { font-size: 85%; }
+sub, sup            { font-size: 75%; vertical-align: baseline; }
+sup                 { top: -0.3em; position: relative; }
+
+h1, h2, h3, h4, h5 {
+    font-weight: $headingsFontWeight;
+    margin: 0 0 0.5em;
+    color: $headingsColor;
+    font-family: $headingsFontFamily;
+}
+
+h1 {
+    font-size: $fontSizeh1;
+    line-height: 1em;
+}
+
+h2 {
+    font-size: $fontSizeh2;
+    line-height: 1em;
+}
+
+h3 {
+    font-size: $fontSizeh3;
+    line-height: 1em;
+}
+
+h4 {
+    font-size: $fontSizeh4;
+    line-height: 1em;
+}
+
+p {
+    font-size: $fontSizeParagraph;
+    margin: 0 0 0.5em;
+}
+
+
+/* =============================================================================
+   Figures and images
+   ========================================================================== */
+svg:not(:root){
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    width: auto\9; /* IE7-8 need help adjusting responsive images */
+    height: auto; /* Part 2: Scale the height according to the width, otherwise you get stretching */
+
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+// Prevent max-width from affecting Google Maps
+#map_canvas img,
+#map img {
+    max-width: none;
+}
+
+/* =============================================================================
+   Chrome Frame Prompt
+   ========================================================================== */
+.chromeframe {
+    position: relative;
+    z-index: 500;
+    margin: 0.2em 0;
+    color: black;
+    padding: 0.8em 0;
+    text-align: center;
+    height: 40px;
+    border-bottom: 1px solid #0A7AA8;
+    background: #fff url("../img/chromeframe.jpg") repeat-x left bottom;
+}
+    .chromeframe > strong {
+        display: block;
+        color: $c2;
+        font-size: 18px;
+        margin: 0 0 5px;
+        font-weight: normal;
+    }
+    .chromeframe a {
+        color: #000;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+
+.msg-warning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $white;
+    z-index: 5000;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #e82d36;
+}
+
+#js-cookie-message {
+    width: 100%;
+    height: 60px;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px 0;
+    background: $black;
+    border-bottom: 1px solid #666666;
+    transition: .2s ease;
+    overflow: hidden;
+    position: absolute;
+    z-index: 9999;
+
+    &.fadeout {
+        height: 0;
+        padding: 0;
+    }
+
+    button {
+        @include font-size(16);
+        color: $white;
+        border: none;
+        background: none;
+    }
+}

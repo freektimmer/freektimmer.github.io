@@ -1,0 +1,52 @@
+//
+//  Settings.scss
+//
+// Global values
+// --------------------------------------------------
+// Custom colors
+// -------------------------
+$c1 : #000000 !default; // text color
+$c2 : #E3E3E3 !default; // background color
+$c3 : #F1001C !default; // red
+// Accent colors
+// -------------------------
+$black : #000 !default;
+$grayDarker : #222 !default;
+$grayDark : #333 !default;
+$gray : #555 !default;
+$grayLight : #999 !default;
+$grayLighter : #eee !default;
+$white : #fff !default;
+// Scaffolding
+// -------------------------
+$bodyBackground : $black !default;
+$textColor : $c1 !default;
+// Links
+// -------------------------
+$linkColor : $c1 !default;
+$linkColorHover : darken($linkColor, 15%) !default;
+// Typography
+// -------------------------
+
+$baseFontFamily : "Helvetica Neue",
+Helvetica,
+Arial,
+sans-serif;
+$baseFontSize : 14px !default;
+$baseLineHeight : 20px !default;
+// Component sizing
+// -------------------------
+$fontSizeParagraph : $baseFontSize;
+// Headings
+$headingsFontFamily : $baseFontFamily;
+$headingsFontWeight : normal;
+$headingsColor : $c1;
+$fontSizeh1 : 2.5em;
+$fontSizeh2 : 1.8em;
+$fontSizeh3 : 1em;
+$fontSizeh4 : 1em;
+// Breakpoints
+// -------------------------
+$mobile: 28.75em;
+$tablet: 47.5em; // 760
+$desktop: 61.875em; // 990
