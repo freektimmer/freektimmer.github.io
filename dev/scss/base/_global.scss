@@ -44,6 +44,7 @@ body {
     background: $bodyBackground;
     -webkit-font-smoothing: antialiased;
     font-smoothing: antialiased;
+    overflow: hidden;
 
     &.active {
         overflow-x: hidden;
