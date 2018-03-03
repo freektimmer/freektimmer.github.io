@@ -35,7 +35,7 @@ $linkColorHover : darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$baseFontFamily:    "Helvetica Neue",Helvetica, Arial, sans-serif;
+$baseFontFamily:    "Rubik",Helvetica, Arial, sans-serif;
 $baseFontSize:      15px !default;
 $baseLineHeight:    1.6em !default;
 
@@ -44,7 +44,7 @@ $baseLineHeight:    1.6em !default;
 $fontSizeParagraph : $baseFontSize;
 
 // Headings
-$headingsFontFamily:    $baseFontFamily;
+$headingsFontFamily:    "Exo 2",$baseFontFamily;
 $headingsFontWeight:    bold;
 $headingsColor:         $c1;
 
