@@ -1,8 +1,10 @@
 var gulp = require('gulp');
 var gutil = require('gulp-util');
 var sass = require('gulp-sass');
+var cleancss = require('gulp-clean');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+var autoprefixer = require('gulp-autoprefixer');
 var browserSync = require('browser-sync').create();
 
 var src = {
@@ -18,7 +20,14 @@ var output = {
 
 gulp.task('sass', function () {
     gulp.src(src.scss)
-        .pipe(sass({ style: 'expanded' }))
+        .pipe(sass({ 
+            outputStyle: 'compressed'
+        }))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cleancss())
         .on('error', gutil.log)
         .pipe(gulp.dest(output.scss))
         .pipe(browserSync.reload({stream: true}));
