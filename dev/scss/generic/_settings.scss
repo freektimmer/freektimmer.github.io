@@ -8,10 +8,6 @@ $c1:    #195679 !default;   // Blue Primary
 $c2:    #E3E3E3 !default;   // background color
 $c3:    #91D4D0 !default;   // Blue Light
 
-// Custom gradients
-// -------------------------
-$g1:    radial-gradient(circle at top right, $c3, $c1) !default;   // Blue Primary
-
 
 // Accent colors
 // -------------------------
@@ -22,6 +18,11 @@ $gray:          #555 !default;
 $grayLight:     #999 !default;
 $grayLighter:   #eee !default;
 $white:         #fff !default;
+
+// Custom gradients
+// -------------------------
+$g1:    radial-gradient(circle at top right, $c3, $c1) !default;   // Blue Primary
+$g2:    radial-gradient(circle at top right, $grayLighter, $white) !default;   // Blue Primary
 
 // Scaffolding
 // -------------------------
@@ -48,10 +49,10 @@ $headingsFontFamily:    "Exo 2",$baseFontFamily;
 $headingsFontWeight:    bold;
 $headingsColor:         $c1;
 
-$fontSizeh1:            4em;
-$fontSizeh2:            1.8em;
-$fontSizeh3:            1em;
-$fontSizeh4:            1em;
+$fontSizeh1:            3rem;
+$fontSizeh2:            2rem;
+$fontSizeh3:            1.5rem;
+$fontSizeh4:            1rem;
 
 // Breakpoints
 // -------------------------

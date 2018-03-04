@@ -34,10 +34,12 @@ gulp.task('sass', function () {
 });             
 
 gulp.task('js', function () {
-    gulp.src(src.js)
-        .pipe(uglify())
+    return gulp.src(src.js)
         .pipe(concat('app.js'))
         .pipe(gulp.dest(output.js))
+        .pipe(concat('app.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(output.js));
 });
 
 gulp.task('browser-sync', ['sass'], function() {

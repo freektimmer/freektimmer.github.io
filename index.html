@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <main class="main" id="scene">
-            <div class="panel">
+    <main class="main">
+        <div class="container">
+            <div class="panel js-depth">
                 <div class="panel__heading js-layer" data-depth="0.2">
                     <h1>Freek Timmer</h1>
                     <span >Webdeveloper&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;UX/UI Designer</span>
@@ -24,23 +24,9 @@
                     </div>
                 </div>
             </div>
-            <div class="circles">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
         </main>
-        
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
-    <script>
-        var scene = document.getElementById('scene');
-        var parallaxInstance = new Parallax(scene, {
-            selector: '.js-layer'
-        });
-    </script>
+    <script src="assets/js/app.min.js"></script>
 </body>
 </html>
