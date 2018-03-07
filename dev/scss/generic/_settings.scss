@@ -15,18 +15,19 @@ $black:         #000 !default;
 $grayDarker:    #111 !default;
 $grayDark:      #333 !default;
 $gray:          #555 !default;
-$grayLight:     #999 !default;
-$grayLighter:   #eee !default;
+$grayLight:     #eeeeee !default;
+$grayLighter:   #fafafa !default;
 $white:         #fff !default;
 
 // Custom gradients
 // -------------------------
 $g1:    radial-gradient(circle at top right, $c3, $c1) !default;   // Blue Primary
-$g2:    radial-gradient(circle at top right, $grayLighter, $white) !default;   // Blue Primary
+$g2:    radial-gradient(circle at 50% 50%, $white, $grayLighter) !default;   // Blue Primary
+$g3:    radial-gradient(circle at 50% 50%, $c3, $c1) !default;   // Blue Primary
 
 // Scaffolding
 // -------------------------
-$bodyBackground : $g1 !default;
+$bodyBackground : $white !default;
 $textColor : $gray !default;
 
 // Links

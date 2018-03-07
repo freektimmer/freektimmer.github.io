@@ -44,9 +44,9 @@
         document.addEventListener('mousemove', initEvent.bind(this));
 
         function initEvent(e) {
-            var x = (e.clientX - this.instance.rect.cx) / 1000 * 60;
-            var y = (e.clientY - this.instance.rect.cy) / 1000 * 60;
-            this.instance.style.transform = 'perspective(400px) rotateY(' + -x + 'deg) ' + 'rotateX(' + y + 'deg)';   
+            var x = (e.clientX - this.instance.rect.cx) / 1000 * 40;
+            var y = (e.clientY - this.instance.rect.cy) / 1000 * 40;
+            this.instance.style.transform = 'perspective(300px) rotateY(' + -x + 'deg) ' + 'rotateX(' + y + 'deg)';   
         }
     }
     window.depth = depth;
