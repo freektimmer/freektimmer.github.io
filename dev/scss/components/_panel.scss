@@ -1,0 +1,88 @@
+//
+// Panel.scss
+// --------------------------------------------------
+
+.panel {
+	margin: 0 auto;
+	width: 330px;
+	
+
+	@include respond-min($tablet) {
+		position: absolute;
+		right: -150px;
+		top: calc(50vh - 150px);
+		z-index: 100;
+	}
+
+	&:after, &:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		border-radius: 4px;
+	}
+
+	&:before  {
+		top: 1rem;
+		left: 1rem;
+		height: calc(100% - 2rem);
+		width: calc(100% - 2rem);
+		background-color: rgba($black, .1);
+		box-shadow: 0 1.5rem 3rem -1rem rgba($black, 0.15), 0 3rem 6rem 0 rgba($black, 0.1);
+		z-index: -1;
+		transform: translateZ(-2rem);
+	}
+
+	&:after {
+		background-color: $white;
+		z-index: -1;
+	}
+
+	&__main {
+		padding: 2rem;
+		h1, span {
+			display: block;
+			transform: translateZ(1rem);
+			transition: .5s ease;	
+		}
+	}
+
+	&__social {
+		position: relative;
+		border-top: 1px solid $grayLight;
+		backface-visibility: visible;
+
+		ul {
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			margin: 0;
+
+			li {
+				border-left: 1px solid $grayLight;
+
+				a {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 4rem;
+					height: 4rem;
+					background-color: $white;
+					transition: .2s ease;
+				}
+
+				&:hover,
+				&:focus {
+					background-color: $grayLight;
+					a {
+						z-index: 10;
+						transform: translateZ(1rem);
+						box-shadow: 0 1px 3px 0 rgba($black, .1);
+					}
+				}
+			}
+		}
+	}
+}

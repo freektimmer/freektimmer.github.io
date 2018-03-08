@@ -1,0 +1,22 @@
+//
+// Teaser.scss
+// --------------------------------------------------
+
+.teaser {
+    height: 100vh;
+    background: $g2;
+    @include respond-min($tablet) {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 60%;
+        z-index: 1;
+    }
+
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+    }
+}
